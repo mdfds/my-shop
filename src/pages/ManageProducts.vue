@@ -3,6 +3,7 @@
         <h2>Пошук товару</h2>
         <input type="text" v-model="searchQuery" placeholder="Введіть назву твоару">
         <p>{{  searchQuery }}</p>
+        <ManageCart/>
         <!-- <ProductList :products="products"/> -->
         <p v-if="filteredProducts.length === 0">No search</p>
         <ProductList 
@@ -14,6 +15,7 @@
 
 <script>
 import ProductList from '../components/ProductList.vue';
+import ManageCart from './ManageCart.vue';
 
 export default {
     data() {
@@ -89,6 +91,7 @@ export default {
         // },
     },
     components: {
+        ManageCart,
         ProductList,
     },
 };

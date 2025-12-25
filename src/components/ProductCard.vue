@@ -19,6 +19,17 @@ export default {
         description: String,
         price: Number,
         image: String
+    },
+    methods: {
+        onAddHandler() {
+            const dara = {
+                name: this.name,
+                price: this.price,
+                image: this.image,
+            }
+            this.$emit("message-addToCart", data)
+
+        }
     }
 };
 </script>
